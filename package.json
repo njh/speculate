@@ -7,7 +7,9 @@
     "test": "mocha",
     "lint": "eslint .",
     "posttest": "npm run lint",
-    "coverage": "istanbul cover _mocha -- -R dot"
+    "coverage": "istanbul cover _mocha -- -R dot",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -33,7 +35,8 @@
     "commander": "^2.9.0",
     "hogan.js": "^3.0.2",
     "rimraf": "^2.5.2",
-    "tar-fs": "^1.11.1"
+    "tar-fs": "^1.11.1",
+    "snyk": "^1.83.0"
   },
   "eslintConfig": {
     "extends": "iplayer-es6",
@@ -48,5 +51,6 @@
     "istanbul": "^0.4.2",
     "mocha": "^5.0.4",
     "sinon": "^4.4.8"
-  }
+  },
+  "snyk": true
 }
